@@ -1,0 +1,17 @@
+{
+  "name": "DNav",
+  "description": "Navigate using a directional-pad or arrow keys.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "all_frames": true,
+      "js": ["content.js"]
+    }
+  ]
+}
